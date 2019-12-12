@@ -15,7 +15,7 @@ html{
 div.card{
   display: inline-flex;
   /* \how do you link to the image? */
-  background-image: url("../MemoryGame/images/logo.jpg");
+  background-image: url("./MemoryGame/images/logo.jpg");
   background:blue;
   
     margin: 5px;
