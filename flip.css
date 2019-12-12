@@ -1,0 +1,32 @@
+
+div.card {
+  /* width: 100%;
+  height: 100%;
+  position: relative; */
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  line-height: 100px;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  background: blue;
+}
+
+.card__face--back {
+  background: red;
+  transform: rotateY(180deg);
+}
