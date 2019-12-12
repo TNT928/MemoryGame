@@ -22,5 +22,6 @@ function startTimer(duration, display) {
 let button = () => {
     let timeStart = 0,
     display = document.querySelector('#time');
-startTimer(timeStart, display);
+    startTimer(timeStart, display);
+    ShuffleCards();
 }
