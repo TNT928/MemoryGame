@@ -1,32 +1,47 @@
-div.card{
+html{
+    max-width: 100%;
+}
 
-    background-color: blue;
+.card-row{
     display: flex;
-    justify-content: space-between;
-    position: relative;
-    flex: 1 0 21%;
-    margin:6px;
-    height: 15vh;
-    flex-direction: row;
-    align-items: center;
+    justify-content: center;
+  
+   margin: 0;
+   padding: 0;
+   
+}
+ 
+
+div.card{
+  display: inline-flex;
+  /* \how do you link to the image? */
+  background-image: url("../MemoryGame/images/logo.jpg");
+  background:blue;
+  
+    margin: 5px;
+    color: white;
+    height: 139px;
+    width: 108px;
+}
+    
 
 }
 
 .gameboard{
-    
-    flex-direction: row;
+    height: auto;
+    flex-direction: column;
+    /* margin: 0 auto; */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .button{
-    margin-top: 40px;
+    margin-top: 19px;
     text-align: center;
     justify-content: center;
-    height: 8vh;
-    width: 20vw;
+    height: 5vh;
+    width: 150px;
     font-size: 20px;
     border-radius: 10px;
     background-color: blue;
@@ -42,28 +57,20 @@ div.card{
     margin-bottom: 20px;
     height: 10vh;
    
-}
+} 
 
-section{
+section#timer-section{
     text-align: center;
+    height: 10em;
+    margin-bottom: 4px;
 
 }
 
 
-@media only screen and (min-width: 768px) {
-    
-    div.card{
-        margin: 2%;
-       
-    }
+ @media only screen and (min-width: 1268px) {
+   .card-row{
+       justify-content: center;
+       display: flex;
+   }
 
-    .button{
-        flex-direction: row;
-        font-size: 20px;
-        height: 10vh;
-        width: 12vw;
-    }
-
-
-  }
-
+}
