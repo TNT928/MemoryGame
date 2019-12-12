@@ -1,0 +1,43 @@
+div.card{
+    background-color: blue;
+    display: flex;
+    position: relative;
+    margin: 6px;
+    padding: 20px;
+    height: 15vh;
+    width: 11vw;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.gameboard{
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.button{
+    text-align: center;
+    justify-content: center;
+    height: 30px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 20px;
+    
+}
+
+.timer{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section{
+    text-align: center;
+
+}
