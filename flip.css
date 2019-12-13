@@ -23,7 +23,7 @@ div.card {
 }
 
 .card_front {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .card_back {
