@@ -24,10 +24,10 @@ div.card {
 
 .card_front {
   border: 1px solid black;
-  /* background: blue; */
 }
 
 .card_back {
   background: red;
   transform: rotateY(180deg);
+  margin: 0;
 }
