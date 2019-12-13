@@ -12,7 +12,8 @@ div.card {
   transform: rotateY(180deg);
 }
 
-.card__face {
+.card_face {
+  position: absolute;
   height: 100%;
   width: 100%;
   line-height: 100px;
@@ -21,11 +22,11 @@ div.card {
   backface-visibility: hidden;
 }
 
-.card__face--front {
+.card_face--front {
   background: blue;
 }
 
-.card__face--back {
+.card_face--back {
   background: red;
   transform: rotateY(180deg);
 }
