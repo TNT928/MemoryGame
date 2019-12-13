@@ -1,81 +1,90 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="flip.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Memory Game</title>
-</head>
-<body>
-    <section id="timer-section">
-        <button class="button" onclick="button()">Start</button>
-        <div id="time" class="timer">00:00</div>
-    </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="flip.css">
+        <link rel="stylesheet" href="styles.css">
+        <title>Memory Game</title>
+    </head>
+    <body>
+        <section id="timer-section">
+            <button class="button" onclick="button()">Start</button>
+            <div id="time" class="timer">00:00</div>
+        </section>
         <section class="gameboard">
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
+            <div class="card-row">
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
             </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
+
+            <div class="card-row">
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
             </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
+            <div class="card-row">
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
             </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
-            </div>
-            <div class="card">
-                <img class="card_face card_face--front" src="GC_logo.png" />
-                <p class="card_face card_face--back">Back</p>
+            <div class="card-row">
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
+                <div class="card">
+                    <img class="card_face card_face--front" src="GC_logo.png" />
+                    <p class="card_face card_face--back">Back</p>
+                </div>
             </div>
         </section>
 
