@@ -1,10 +1,10 @@
 let cards = document.querySelectorAll('.card');
 const CARD_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
 
-
-card.addEventListener( 'click', function() {
+//CARD FLIP
+cards.forEach(card => card.addEventListener('click', e => {
   card.classList.toggle('is-flipped');
-});
+}));
 
 function ShuffleCards() {
   let shuffledCardValues = shuffle(CARD_VALUES);
@@ -34,10 +34,3 @@ function shuffle(array) {
 
   return array;
 }
-
-
-
-let card = document.querySelector('.card');
-card.addEventListener( 'click', function() {
-  card.classList.toggle('is-flipped');
-});
