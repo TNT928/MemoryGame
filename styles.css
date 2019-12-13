@@ -14,17 +14,12 @@ html{
 
 div.card{
   display: inline-flex;
-  /* \how do you link to the image? */
-  background-image: url("logo.jpg");
   background:blue;
   
     margin: 5px;
     color: white;
     height: 139px;
     width: 108px;
-}
-    
-
 }
 
 .gameboard{
