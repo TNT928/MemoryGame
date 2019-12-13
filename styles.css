@@ -14,11 +14,11 @@ html{
 
 div.card{
   display: inline-flex;
-  background:blue;
+
   
     margin: 5px;
     color: white;
-    height: 139px;
+    height: 100px;
     width: 108px;
 }
 
