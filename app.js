@@ -1,8 +1,10 @@
 //CARD FLIP
-cards.forEach(card => card.addEventListener('click', e => {
+function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
-  card.classList.toggle('is-flipped');
-}));
+  cards.forEach(card => card.addEventListener('click', e => {
+    card.classList.toggle('is-flipped');
+  }));
+}
 
 /**
  * Shuffles the numbers assigned to each card using a Fisher-Yates shuffle
