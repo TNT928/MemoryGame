@@ -22,12 +22,12 @@ div.card {
   backface-visibility: hidden;
 }
 
-.card_face--front {
+.card_front {
   border: 1px solid black;
-  /* background: blue; */
 }
 
-.card_face--back {
+.card_back {
   background: red;
   transform: rotateY(180deg);
+  margin: 0;
 }
