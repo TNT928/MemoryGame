@@ -1,3 +1,8 @@
+// On load
+AddCardClickListeners();
+ShuffleCards();
+
+
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
@@ -18,7 +23,7 @@ function ShuffleCards() {
   // Getting the elements for each card face
   let cardFaces = document.querySelectorAll('.card_back');
   // Adding values to the card face
-  for (let i = 0; i < cards.length; i++) {
+  for (let i = 0; i < cardFaces.length; i++) {
     cardFaces[i].innerHTML += shuffledCardValues[i];
   }
 }
