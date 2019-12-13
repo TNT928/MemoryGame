@@ -1,16 +1,23 @@
-let cards = document.querySelectorAll('.card');
-const CARD_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-
 //CARD FLIP
 cards.forEach(card => card.addEventListener('click', e => {
+  let cards = document.querySelectorAll('.card');
   card.classList.toggle('is-flipped');
 }));
 
+/**
+ * Shuffles the numbers assigned to each card using a Fisher-Yates shuffle
+ * @see shuffle()
+ */
 function ShuffleCards() {
+  // Getting numbers and shuffling order
+  const CARD_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
   let shuffledCardValues = shuffle(CARD_VALUES);
 
+  // Getting the elements for each card face
+  let cardFaces = document.querySelectorAll('.card_back');
+  // Adding values to the card face
   for (let i = 0; i < cards.length; i++) {
-    cards[i].innerHTML += shuffledCardValues[i];
+    cardFaces[i].innerHTML += shuffledCardValues[i];
   }
 }
 
