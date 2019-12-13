@@ -23,7 +23,8 @@ div.card {
 }
 
 .card_face--front {
-  background: blue;
+  border: 1px solid black;
+  /* background: blue; */
 }
 
 .card_face--back {
