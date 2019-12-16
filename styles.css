@@ -6,20 +6,16 @@ body{
     background: #003973;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 }
 
 .card-row{
     display: flex;
     justify-content: center;
-
     margin: 0;
     padding: 0;
-
 }
 
 div.card {
-    display: flex;
     display: inline-flex;
     border: 1px solid black;
     margin: 5px;
@@ -31,7 +27,6 @@ div.card {
 .gameboard {
     height: auto;
     flex-direction: column;
-    /* margin: 0 auto; */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
