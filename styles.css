@@ -1,4 +1,4 @@
-html{
+html {
     max-width: 100%;
 }
 
@@ -12,22 +12,23 @@ body{
 .card-row{
     display: flex;
     justify-content: center;
-  
-   margin: 0;
-   padding: 0;
-   
-}
- 
 
-div.card{
+    margin: 0;
+    padding: 0;
+
+}
+
+div.card {
+    display: flex;
     display: inline-flex;
+    border: 1px solid black;
     margin: 5px;
     color: white;
     height: 100px;
     width: 108px;
 }
 
-.gameboard{
+.gameboard {
     height: auto;
     flex-direction: column;
     /* margin: 0 auto; */
@@ -36,7 +37,7 @@ div.card{
     flex-wrap: wrap;
 }
 
-.button{
+.button {
     margin-top: 19px;
     text-align: center;
     justify-content: center;
@@ -47,19 +48,19 @@ div.card{
     background-color: blue;
     color: white;
     margin-bottom: 20px;
-    
+
 }
 
-.timer{
+.timer {
     justify-content: center;
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
     height: 10vh;
-   
-} 
 
-section#timer-section{
+}
+
+section#timer-section {
     text-align: center;
     height: 10em;
     margin-bottom: 4px;
@@ -67,10 +68,10 @@ section#timer-section{
 }
 
 
- @media only screen and (min-width: 1268px) {
-   .card-row{
-       justify-content: center;
-       display: flex;
-   }
+@media only screen and (min-width: 1268px) {
+    .card-row {
+        justify-content: center;
+        display: flex;
+    }
 
 }
