@@ -15,12 +15,13 @@ function startTimer(duration, display) {
     }, 1000);
 }
 
-// window.onload = function () {
-
-// };
-
 let button = () => {
     let timeStart = 0,
     display = document.querySelector('#time');
 startTimer(timeStart, display);
 }
+
+
+//create a function that changes the text inside button from "start" onClick to "reset"
+//create an if/else statement that changes the function from button() to start timer based 
+//what text is in the button, if start button()runs timer. If reset() button resets timer to 0. 
