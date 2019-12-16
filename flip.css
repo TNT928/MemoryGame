@@ -31,3 +31,7 @@ div.card {
   transform: rotateY(180deg);
   margin: 0;
 }
+
+.hidden {
+  display: none;
+}

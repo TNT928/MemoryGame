@@ -13,7 +13,7 @@ html {
 
 
 div.card {
-    display: inline-flex;
+    display: flex;
     border: 1px solid black;
     margin: 5px;
     color: white;
