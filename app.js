@@ -15,7 +15,13 @@ ShuffleCards();
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
   cards.forEach(card => card.addEventListener('click', e => {
+    // Changing wrapper div class
     card.classList.toggle('is-flipped');
+    // Toggling hiding sides
+    let cardSides = card.children;
+    for (const card of cardSides) {
+      card.classList.toggle('hidden');
+    }
   }));
 }
 

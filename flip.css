@@ -1,8 +1,9 @@
 
 
 div.card {
-  
-  background-color: white;
+  /* width: 100%;
+  height: 100%;
+  position: relative; */
   transition: transform 0.5s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -32,10 +33,8 @@ div.card {
 
 
 .card_front {
-  border: 1px solid black;
+  background-color: white;
 }
-
-
 
 img.card_back.card{
   display: none;
@@ -47,18 +46,6 @@ img.card_back.card.is-flipped{
   display: visible;
 }
 
-
-div img .card.is-flipped{
-  display: visible;
-}
-
-.card_back{
+.hidden {
   display: none;
-  width: 100%;
-  height: 100%;
 }
-
-/* div.card_back.is-flipped{
-  display: visible;
-
-} */
