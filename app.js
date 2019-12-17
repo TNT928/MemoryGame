@@ -31,15 +31,31 @@ function AddCardClickListeners() {
  */
 function ShuffleCards() {
   // Getting numbers and shuffling order
-  const CARD_VALUES = [1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8];
-  let shuffledCardValues = shuffle(CARD_VALUES);
+  const backgroundImage = [
+      'images/tuna1.jpg',
+      'images/tuna2.jpg',
+      'images/tuna3.jpg',
+      'images/tuna4.jpg',
+      'images/tuna5.png',
+      'images/tuna6.jpg',
+      'images/tuna7.png',
+      'images/tuna8.jpg',
+      'images/tuna1.jpg',
+      'images/tuna2.jpg',
+      'images/tuna3.jpg',
+      'images/tuna4.jpg',
+      'images/tuna5.png',
+      'images/tuna6.jpg',
+      'images/tuna7.png',
+      'images/tuna8.jpg'
+    ];
+  let shuffledCardValues = shuffle(backgroundImage);
 
   // Getting the elements for each card face
   let cardFaces = document.querySelectorAll('.card_back');
   // Adding values to the card face
   for (let i = 0; i < cardFaces.length; i++) {
-    cardFaces[i].innerHTML += shuffledCardValues[i];
-    
+    cardFaces[i].setAttribute('src', shuffledCardValues[i]);
   }
 
 
