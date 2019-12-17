@@ -23,23 +23,23 @@ function AddCardClickListeners() {
 function ShuffleCards() {
   // Getting numbers and shuffling order
   const backgroundImage = [
-      'images/tuna1.jpg',
-      'images/tuna2.jpg',
-      'images/tuna3.jpg',
-      'images/tuna4.jpg',
-      'images/tuna5.png',
-      'images/tuna6.jpg',
-      'images/tuna7.png',
-      'images/tuna8.jpg',
-      'images/tuna1.jpg',
-      'images/tuna2.jpg',
-      'images/tuna3.jpg',
-      'images/tuna4.jpg',
-      'images/tuna5.png',
-      'images/tuna6.jpg',
-      'images/tuna7.png',
-      'images/tuna8.jpg'
-    ];
+    'images/tuna1.jpg',
+    'images/tuna2.jpg',
+    'images/tuna3.jpg',
+    'images/tuna4.jpg',
+    'images/tuna5.png',
+    'images/tuna6.jpg',
+    'images/tuna7.png',
+    'images/tuna8.jpg',
+    'images/tuna1.jpg',
+    'images/tuna2.jpg',
+    'images/tuna3.jpg',
+    'images/tuna4.jpg',
+    'images/tuna5.png',
+    'images/tuna6.jpg',
+    'images/tuna7.png',
+    'images/tuna8.jpg'
+  ];
   let shuffledCardValues = shuffle(backgroundImage);
 
   // Getting the elements for each card face
@@ -48,9 +48,6 @@ function ShuffleCards() {
   for (let i = 0; i < cardFaces.length; i++) {
     cardFaces[i].setAttribute('src', shuffledCardValues[i]);
   }
-
-
-
 }
 
 // Fisher-Yates Shuffle
@@ -72,4 +69,10 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+// Check to see if two cards are flipped
+function isPairFlipped() {
+  let flippedCards = document.querySelectorAll('.is-flipped');
+  return flippedCards.length === 2 ? true : false;
 }
