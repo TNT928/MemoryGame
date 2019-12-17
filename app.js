@@ -3,11 +3,25 @@ AddCardClickListeners();
 ShuffleCards();
 
 
+// const backgroundImage = [
+//   'images/bluefin-tuna-fish-ocean-sea-getty-stock.jpg',
+//   'images/mercury-in-tuna-1296x728-feature.jpg',
+//   'images/raw_tuna_istock.jpg',
+//   'images/tuna-fish.jpg'
+
+// ]
+
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
   cards.forEach(card => card.addEventListener('click', e => {
+    // Changing wrapper div class
     card.classList.toggle('is-flipped');
+    // Toggling hiding sides
+    let cardSides = card.children;
+    for (const card of cardSides) {
+      card.classList.toggle('hidden');
+    }
   }));
 }
 
@@ -25,7 +39,11 @@ function ShuffleCards() {
   // Adding values to the card face
   for (let i = 0; i < cardFaces.length; i++) {
     cardFaces[i].innerHTML += shuffledCardValues[i];
+    
   }
+
+
+
 }
 
 // Fisher-Yates Shuffle
