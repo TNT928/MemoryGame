@@ -2,15 +2,6 @@
 AddCardClickListeners();
 ShuffleCards();
 
-
-// const backgroundImage = [
-//   'images/bluefin-tuna-fish-ocean-sea-getty-stock.jpg',
-//   'images/mercury-in-tuna-1296x728-feature.jpg',
-//   'images/raw_tuna_istock.jpg',
-//   'images/tuna-fish.jpg'
-
-// ]
-
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
