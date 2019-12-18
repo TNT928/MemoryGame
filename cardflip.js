@@ -9,26 +9,3 @@ let isMatch = (flipCards) => {
   }
 
 }
-
-let mom = document.querySelectorAll('.card');
-let child = document.querySelectorAll('.card_back')
-
-if (isMatch(child)) {
-  mom[0].removeChild(child[0])
-  mom[1].removeChild(child[1])
-
-}
-
-let removeCard = () => {
-  mom[0].removeChild(child[0])
-
-}
-
-let cardToRemove = child[0];
-
-
-
-
-
-
-// isMatch(flipCards)
