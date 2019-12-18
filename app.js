@@ -36,7 +36,9 @@ function AddCardClickListeners() {
         let flippedCards = document.querySelectorAll('.is-flipped');
         if (isMatch(flippedCards))
         {
-          
+          // Remove cards
+        } else {
+          // Un-flip cards
         }
       }
     }
