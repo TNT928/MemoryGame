@@ -20,9 +20,8 @@ div.card {
     border: 1px solid black;
     margin: 5px;
     color: white;
-    height: 100px;
-    width: 108px;
-}
+    height: 20vw;
+    width: 20vw;}
 
 .gameboard {
     height: auto;
@@ -63,10 +62,23 @@ section#timer-section {
 }
 
 
-@media only screen and (min-width: 1268px) {
+@media only screen and (min-width: 768px) {
     .card-row {
         justify-content: center;
         display: flex;
+    }
+
+    div.card{
+        height: 10vw;
+        width: 10vw;;
+    }
+
+    @media only screen and (min-width: 556px){
+        div.card{
+            height: 10vw;
+            width:10vw;
+        }
+
     }
 
 }
