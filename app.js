@@ -31,9 +31,24 @@ function AddCardClickListeners() {
         for (const div of flippedDivs) {
           flippedCardBacks.push(div.querySelector('.card_back'));
         }
-        
+
         if (isMatch(flippedCardBacks)) {
-          // Remove cards
+          /*
+            Remove cards
+          */
+          for (const div of flippedDivs) {
+            // Hiding child elements
+            for (const child of div.children) {
+              if (!child.classList.contains('hidden'))
+              {
+                child.classList.add('hidden');
+              }
+            }
+            // Hiding div
+            div.classList.add('hidden-card');
+            div.classList.remove('is-flipped');
+          }
+
         } else {
           /*
             Un-flip cards
