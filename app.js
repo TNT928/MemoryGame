@@ -8,13 +8,6 @@ function AddCardClickListeners() {
   cards.forEach(card => card.addEventListener('click', e => {
     // Filter to prevent more than 2 cards being flipped
     if (!isPairFlipped()) {
-      // get flipped card backs
-      // check to see if they match
-      //    if they don't match
-      //        flip them back over after a short delay
-      //    if they do match
-      //        remove them
-
       /*
         Flipping card
       */
@@ -30,15 +23,33 @@ function AddCardClickListeners() {
         Checking  if 2 cards are flipped
           then checking if they match if true
       */
-      if (isPairFlipped())
-      {
+      if (isPairFlipped()) {
         // Getting the flipped cards
-        let flippedCards = document.querySelectorAll('.is-flipped');
-        if (isMatch(flippedCards))
-        {
+        let flippedDivs = document.querySelectorAll('.is-flipped');
+        // Getting img elements to give to isMatch function
+        let flippedCardBacks = [];
+        for (const div of flippedDivs) {
+          flippedCardBacks.push(div.querySelector('.card_back'));
+        }
+        
+        if (isMatch(flippedCardBacks)) {
           // Remove cards
         } else {
-          // Un-flip cards
+          /*
+            Un-flip cards
+          */
+          // Delay
+          setTimeout(function () {
+            // Changing wrapper div class
+            flippedDivs.forEach(card => card.classList.toggle('is-flipped'));
+            // Toggle hiding sides
+            for (const card of flippedDivs) {
+              let children = card.children;
+              for (const child of children) {
+                child.classList.toggle('hidden')
+              }
+            }
+          }, 1000); // 1000ms = 1 sec
         }
       }
     }
