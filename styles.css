@@ -17,7 +17,6 @@ body{
 
 div.card {
     display: inline-flex;
-    border: 1px solid black;
     margin: 5px;
     color: white;
     height: 100px;

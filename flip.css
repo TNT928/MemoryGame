@@ -1,5 +1,6 @@
 div.card {
   background-color: white;
+  border: 1px solid black;
   transition: transform 0.5s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -33,4 +34,9 @@ div.card {
 
 .hidden {
   display: none;
+}
+
+div.hidden-card {
+  background-color: transparent;
+  border: 1px solid transparent;
 }
