@@ -6,12 +6,39 @@ ShuffleCards();
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
   cards.forEach(card => card.addEventListener('click', e => {
-    // Changing wrapper div class
-    card.classList.toggle('is-flipped');
-    // Toggling hiding sides
-    let cardSides = card.children;
-    for (const card of cardSides) {
-      card.classList.toggle('hidden');
+    // Filter to prevent more than 2 cards being flipped
+    if (!isPairFlipped()) {
+      // get flipped card backs
+      // check to see if they match
+      //    if they don't match
+      //        flip them back over after a short delay
+      //    if they do match
+      //        remove them
+
+      /*
+        Flipping card
+      */
+      // Changing wrapper div class
+      card.classList.toggle('is-flipped');
+      // Toggling hiding sides
+      let cardSides = card.children;
+      for (const card of cardSides) {
+        card.classList.toggle('hidden');
+      }
+
+      /*
+        Checking  if 2 cards are flipped
+          then checking if they match if true
+      */
+      if (isPairFlipped())
+      {
+        // Getting the flipped cards
+        let flippedCards = document.querySelectorAll('.is-flipped');
+        if (isMatch(flippedCards))
+        {
+          
+        }
+      }
     }
   }));
 }
