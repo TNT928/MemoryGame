@@ -66,8 +66,8 @@ section#timer-section {
 
 @media only screen and (min-width: 700px) and (max-width: 1280px){
     div.card{
-        height: 7rem;
-        width: 7rem;
+        height: 6rem;
+        width: 6rem;
     }
     
   }
