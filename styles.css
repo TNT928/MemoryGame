@@ -6,6 +6,7 @@ body{
     background: #003973;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width:100%
 }
 
 .card-row{
@@ -62,23 +63,32 @@ section#timer-section {
 }
 
 
-@media only screen and (min-width: 768px) {
-    .card-row {
+@media only screen and (min-width: 548px) {
+    /* .card-row {
         justify-content: center;
         display: flex;
-    }
+    } */
 
     div.card{
-        height: 10vw;
-        width: 10vw;;
+        height: 15vw;
+        width: 15vw;
     }
-
-    @media only screen and (min-width: 556px){
+/* 
+     @media only screen and (min-width: 700px){
         div.card{
-            height: 10vw;
-            width:10vw;
+        height: 20vw;
+        width: 20vw;
         }
 
-    }
+    } 
+
+   
+     @media only screen and (min-width:1276px){
+        div.card{
+        height: 8vw;
+        width: 8vw;
+        }
+
+    }  */
 
 }
