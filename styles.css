@@ -1,5 +1,5 @@
 html {
-    max-width: 100%;
+    width: 100%;
 }
 
 body{
@@ -18,7 +18,6 @@ body{
 
 div.card {
     display: inline-flex;
-    border: 1px solid black;
     margin: 5px;
     color: white;
     height: 20vw;
@@ -59,36 +58,5 @@ section#timer-section {
     text-align: center;
     height: 10em;
     margin-bottom: 4px;
-
-}
-
-
-@media only screen and (min-width: 548px) {
-    /* .card-row {
-        justify-content: center;
-        display: flex;
-    } */
-
-    div.card{
-        height: 15vw;
-        width: 15vw;
-    }
-/* 
-     @media only screen and (min-width: 700px){
-        div.card{
-        height: 20vw;
-        width: 20vw;
-        }
-
-    } 
-
-   
-     @media only screen and (min-width:1276px){
-        div.card{
-        height: 8vw;
-        width: 8vw;
-        }
-
-    }  */
 
 }

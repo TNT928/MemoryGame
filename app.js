@@ -2,19 +2,19 @@
 AddCardClickListeners();
 ShuffleCards();
 
-
-// const backgroundImage = [
-//   'images/bluefin-tuna-fish-ocean-sea-getty-stock.jpg',
-//   'images/mercury-in-tuna-1296x728-feature.jpg',
-//   'images/raw_tuna_istock.jpg',
-//   'images/tuna-fish.jpg'
-
-// ]
-
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
-  cards.forEach(card => card.addEventListener('click', e => {
+  cards.forEach(card => card.addEventListener('click', cardOnClick));
+}
+
+function cardOnClick(e) {
+  let card = e.currentTarget;
+  // Filter to prevent more than 2 cards being flipped
+  if (!isPairFlipped()) {
+    /*
+      Flipping card
+    */
     // Changing wrapper div class
     card.classList.toggle('is-flipped');
     // Toggling hiding sides
@@ -22,7 +22,58 @@ function AddCardClickListeners() {
     for (const card of cardSides) {
       card.classList.toggle('hidden');
     }
-  }));
+
+    /*
+      Checking  if 2 cards are flipped
+        then checking if they match if true
+    */
+    if (isPairFlipped()) {
+      // Getting the flipped cards
+      let flippedDivs = document.querySelectorAll('.is-flipped');
+      // Getting img elements to give to isMatch function
+      let flippedCardBacks = [];
+      for (const div of flippedDivs) {
+        flippedCardBacks.push(div.querySelector('.card_back'));
+      }
+
+      if (isMatch(flippedCardBacks)) {
+        /*
+          Remove cards
+        */
+        setTimeout(function () {
+          for (const div of flippedDivs) {
+            // Hiding child elements
+            for (const child of div.children) {
+              if (!child.classList.contains('hidden')) {
+                child.classList.add('hidden');
+              }
+            }
+            // Hiding div
+            div.classList.add('hidden-card');
+            div.classList.remove('is-flipped');
+            div.removeEventListener('click', cardOnClick);
+          }
+        }, 800); // 1000ms = 1 sec
+
+      } else {
+        /*
+          Un-flip cards
+        */
+        // Delay
+        setTimeout(function () {
+          // Changing wrapper div class
+          flippedDivs.forEach(card => card.classList.toggle('is-flipped'));
+          // Toggle hiding sides
+          for (const card of flippedDivs) {
+            let children = card.children;
+            for (const child of children) {
+              child.classList.toggle('hidden');
+            }
+          }
+        }, 800); // 1000ms = 1 sec
+      }
+    }
+  }
 }
 
 /**
@@ -32,23 +83,23 @@ function AddCardClickListeners() {
 function ShuffleCards() {
   // Getting numbers and shuffling order
   const backgroundImage = [
-      'images/tuna1.jpg',
-      'images/tuna2.jpg',
-      'images/tuna3.jpg',
-      'images/tuna4.jpg',
-      'images/tuna5.png',
-      'images/tuna6.jpg',
-      'images/tuna7.png',
-      'images/tuna8.jpg',
-      'images/tuna1.jpg',
-      'images/tuna2.jpg',
-      'images/tuna3.jpg',
-      'images/tuna4.jpg',
-      'images/tuna5.png',
-      'images/tuna6.jpg',
-      'images/tuna7.png',
-      'images/tuna8.jpg'
-    ];
+    'images/tuna1.jpg',
+    'images/tuna2.jpg',
+    'images/tuna3.jpg',
+    'images/tuna4.jpg',
+    'images/tuna5.png',
+    'images/tuna6.jpg',
+    'images/tuna7.png',
+    'images/tuna8.jpg',
+    'images/tuna1.jpg',
+    'images/tuna2.jpg',
+    'images/tuna3.jpg',
+    'images/tuna4.jpg',
+    'images/tuna5.png',
+    'images/tuna6.jpg',
+    'images/tuna7.png',
+    'images/tuna8.jpg'
+  ];
   let shuffledCardValues = shuffle(backgroundImage);
 
   // Getting the elements for each card face
@@ -57,9 +108,6 @@ function ShuffleCards() {
   for (let i = 0; i < cardFaces.length; i++) {
     cardFaces[i].setAttribute('src', shuffledCardValues[i]);
   }
-
-
-
 }
 
 // Fisher-Yates Shuffle
@@ -81,4 +129,10 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+// Check to see if two cards are flipped
+function isPairFlipped() {
+  let flippedCards = document.querySelectorAll('.is-flipped');
+  return flippedCards.length === 2 ? true : false;
 }
