@@ -1,6 +1,6 @@
-let timer = document.getElementById("timer")
-let button = document.getElementById("btn")
-let reset = document.getElementById("reset")
+let timer = document.getElementById("timer");
+let button = document.getElementById("btn");
+let reset = document.getElementById("reset");
 let second = 1,
     minute = 0,
     hour = 0,
