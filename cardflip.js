@@ -1,28 +1,11 @@
-const backgroundImage = [
-    'images/bluefin-tuna-fish-ocean-sea-getty-stock.jpg',
-    'images/mercury-in-tuna-1296x728-feature.jpg',
-    'images/raw_tuna_istock.jpg',
-    'images/tuna-fish.jpg'
+let isMatch = (flipCards) => {
+  let src1 = flipCards[0].getAttribute('src');
+  let src2 = flipCards[1].getAttribute('src');
 
-]
-
-
-let cardBack = document.querySelector('.card')
-let newImage = document.createElement('img')
-
-
-
-let cardFlip = ()=>{
-    
-
-for(let i= 0; i< cardFlip.length; i++){
-    cardFlip.backgroundImage= []
-}
-
+  if (src1 === src2) {
+    return true;
+  } else {
+    return false;
+  }
 
 }
-
-
-
-
-
