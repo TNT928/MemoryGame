@@ -37,6 +37,7 @@ div.card {
 }
 
 div.hidden-card {
+  cursor: default;
   background-color: transparent;
   border: 1px solid transparent;
 }
