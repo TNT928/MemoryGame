@@ -1,27 +1,35 @@
-function startTimer(duration, display) {
-    let timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10);
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
+let timer = document.getElementById("timer")
+let button = document.getElementById("btn")
+let reset = document.getElementById("reset")
+let second = 1,
+    minute = 0,
+    hour = 0,
+    interval;
 
-        display.textContent = minutes + ":" + seconds;
+button.addEventListener("click", function(event){
+    clearInterval(interval);
 
-        if (++timer < 0) {
-            timer = duration;
+    interval = setInterval(function(){
+        timer.innerHTML = `${minute} mins ${second} secs`;
+        second++;
+        if(second == 60) {
+            minute++;
+            second = 0;
         }
-    }, 1000);
-}
+        if(minute == 60) {
+            hour++;
+            minute = 0;
+        }
+}, 1000);
+});
 
-// window.onload = function () {
+reset.addEventListener("click", function(event){
+    second = 0;
+    minute = 0;
+    timer.innerHTML = `0 mins 0 secs`;
+    clearInterval(interval);
 
-// };
+})
 
-let button = () => {
-    let timeStart = 0,
-    display = document.querySelector('#time');
-    startTimer(timeStart, display);
-    ShuffleCards();
-}
+
