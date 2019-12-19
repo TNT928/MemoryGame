@@ -11,7 +11,7 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     width: 100%;
     overflow: hidden;
-    background-size: 104vw;
+    background-size: 141vw;
 }
 
 .card-row {
@@ -25,8 +25,8 @@ div.card {
     display: inline-flex;
     margin: 5px;
     color: white;
-    height: 5rem;
-    width: 5rem;
+    height: 6rem;
+    width: 6rem;
 }
 
 .gameboard {
@@ -69,7 +69,12 @@ section#timer-section {
 
 @media only screen and (min-width: 700px) {
     div.card {
-        height: 6rem;
-        width: 6rem;
+        height: 7rem;
+        width: 7rem;
     }
+    body{
+        background-size: 100vw;
+    }
+
+  
 }
