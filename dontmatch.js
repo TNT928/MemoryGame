@@ -1,34 +1,40 @@
-let cards = document.querySelectorAll(".card")
+let cards = document.querySelectorAll(".card");
 let hasFlippedCard = false;
 let firstCard, secondCard;
 
 function reflipCard() {
-    this.classList.add('flip');
-    if (this === firstCard) return;
-    if (!hasFlippedCard) {
-        hasFlippedCard = true;
-        firstCard = this;
-        return;
-    }
-    secondCard = this;
-    checkForMatch();
+  this.classList.add("flip");
+  if (this === firstCard) return;
+  if (!hasFlippedCard) {
+    hasFlippedCard = true;
+    firstCard = this;
+    return;
+  }
+  secondCard = this;
+  checkForMatch();
 }
 
 //Match Card Function -- handles matching logic for clicked cards
 function checkForMatch() {
-    //let isMatch = somehow find way to equate secondcard to firstcard;
+  let isMatch = 'images/tuna1.jpg' === 'images/tuna1.jpg';
+  'images/tuna2.jpg' === 'images/tuna2.jpg';
+  'images/tuna3.jpg' === 'images/tuna3.jpg';
+  'images/tuna4.jpg' === 'images/tuna4.jpg';
+  'images/tuna5.jpg' === 'images/tuna5.jpg';
+  'images/tuna6.jpg' === 'images/tuna6.jpg';
+  'images/tuna7.jpg' === 'images/tuna7.jpg';
+  'images/tuna8.jpg' === 'images/tuna8.jpg';
+  //dont even know if that will do anything tbh
 
-    isMatch ? disableCards(): unflipCards();
-  }
-
-function disableCards(){
-
+  isMatch ? disableCards() : unflipCards();
 }
 
-function unflipCards(){
-    
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
 }
 
+function unflipCards() {}
 
 //possible other matching function?? Come back to this
 
