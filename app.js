@@ -5,70 +5,75 @@ ShuffleCards();
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
-  cards.forEach(card => card.addEventListener('click', e => {
-    // Filter to prevent more than 2 cards being flipped
-    if (!isPairFlipped()) {
-      /*
-        Flipping card
-      */
-      // Changing wrapper div class
-      card.classList.toggle('is-flipped');
-      // Toggling hiding sides
-      let cardSides = card.children;
-      for (const card of cardSides) {
-        card.classList.toggle('hidden');
+  cards.forEach(card => card.addEventListener('click', cardOnClick));
+}
+
+function cardOnClick(e) {
+  let card = e.currentTarget;
+  // Filter to prevent more than 2 cards being flipped
+  if (!isPairFlipped()) {
+    /*
+      Flipping card
+    */
+    // Changing wrapper div class
+    card.classList.toggle('is-flipped');
+    // Toggling hiding sides
+    let cardSides = card.children;
+    for (const card of cardSides) {
+      card.classList.toggle('hidden');
+    }
+
+    /*
+      Checking  if 2 cards are flipped
+        then checking if they match if true
+    */
+    if (isPairFlipped()) {
+      // Getting the flipped cards
+      let flippedDivs = document.querySelectorAll('.is-flipped');
+      // Getting img elements to give to isMatch function
+      let flippedCardBacks = [];
+      for (const div of flippedDivs) {
+        flippedCardBacks.push(div.querySelector('.card_back'));
       }
 
-      /*
-        Checking  if 2 cards are flipped
-          then checking if they match if true
-      */
-      if (isPairFlipped()) {
-        // Getting the flipped cards
-        let flippedDivs = document.querySelectorAll('.is-flipped');
-        // Getting img elements to give to isMatch function
-        let flippedCardBacks = [];
-        for (const div of flippedDivs) {
-          flippedCardBacks.push(div.querySelector('.card_back'));
-        }
-
-        if (isMatch(flippedCardBacks)) {
-          /*
-            Remove cards
-          */
+      if (isMatch(flippedCardBacks)) {
+        /*
+          Remove cards
+        */
+        setTimeout(function () {
           for (const div of flippedDivs) {
             // Hiding child elements
             for (const child of div.children) {
-              if (!child.classList.contains('hidden'))
-              {
+              if (!child.classList.contains('hidden')) {
                 child.classList.add('hidden');
               }
             }
             // Hiding div
             div.classList.add('hidden-card');
             div.classList.remove('is-flipped');
+            div.removeEventListener('click', cardOnClick);
           }
+        }, 800); // 1000ms = 1 sec
 
-        } else {
-          /*
-            Un-flip cards
-          */
-          // Delay
-          setTimeout(function () {
-            // Changing wrapper div class
-            flippedDivs.forEach(card => card.classList.toggle('is-flipped'));
-            // Toggle hiding sides
-            for (const card of flippedDivs) {
-              let children = card.children;
-              for (const child of children) {
-                child.classList.toggle('hidden')
-              }
+      } else {
+        /*
+          Un-flip cards
+        */
+        // Delay
+        setTimeout(function () {
+          // Changing wrapper div class
+          flippedDivs.forEach(card => card.classList.toggle('is-flipped'));
+          // Toggle hiding sides
+          for (const card of flippedDivs) {
+            let children = card.children;
+            for (const child of children) {
+              child.classList.toggle('hidden');
             }
-          }, 1000); // 1000ms = 1 sec
-        }
+          }
+        }, 800); // 1000ms = 1 sec
       }
     }
-  }));
+  }
 }
 
 /**
