@@ -12,6 +12,12 @@ body {
     width: 100%;
     overflow: hidden;
     background-size: 141vw;
+    margin: 0;
+    width: 100vw;
+}
+
+.box{
+    justify-content: center;
 }
 
 .card-row {
@@ -25,8 +31,9 @@ div.card {
     display: inline-flex;
     margin: 5px;
     color: white;
-    height: 6rem;
-    width: 6rem;
+    height: 5em;
+    width: 5em;
+    overflow: hidden;
 }
 
 .gameboard {
