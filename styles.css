@@ -24,7 +24,6 @@ body {
 div.card {
     display: inline-flex;
     margin: 5px;
-    color: white;
     height: 6rem;
     width: 6rem;
 }
