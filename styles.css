@@ -1,29 +1,48 @@
-div.card{
-    background-color: blue;
-    display: flex;
-    position: relative;
-    margin: 6px;
-    padding: 20px;
-    height: 15vh;
-    width: 11vw;
-    flex-direction: column;
-    align-items: center;
+html{
+    max-width: 100%;
+}
 
+body{
+    background: #003973;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #E5E5BE, #003973);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #E5E5BE, #003973); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.card-row{
+    display: flex;
+    justify-content: center;
+  
+   margin: 0;
+   padding: 0;
+   
+}
+ 
+
+div.card{
+    display: inline-flex;
+    margin: 5px;
+    color: white;
+    height: 100px;
+    width: 108px;
 }
 
 .gameboard{
-    flex-direction: row;
+    height: auto;
+    flex-direction: column;
+    /* margin: 0 auto; */
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .button{
+    margin-top: 19px;
     text-align: center;
     justify-content: center;
-    height: 30px;
-    width: 40px;
+    height: 5vh;
+    width: 150px;
+    font-size: 20px;
     border-radius: 10px;
     background-color: blue;
     color: white;
@@ -34,10 +53,24 @@ div.card{
 .timer{
     justify-content: center;
     text-align: center;
+    font-size: 40px;
     margin-bottom: 20px;
+    height: 10vh;
+   
+} 
+
+section#timer-section{
+    text-align: center;
+    height: 10em;
+    margin-bottom: 4px;
+
 }
 
-section{
-    text-align: center;
+
+ @media only screen and (min-width: 1268px) {
+   .card-row{
+       justify-content: center;
+       display: flex;
+   }
 
 }
