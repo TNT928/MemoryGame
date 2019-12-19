@@ -1,3 +1,17 @@
+//Match Card Function
+let cards = document.querySelectorAll(".card")
+let hasFlippedCard = false;
+let firstCard, secondCard;
+
+function flipCard() {
+    this.classList.add('flip');
+    if (!hasFlippedCard) {
+        hasFlippedCard = true;
+        firstCard = this;
+    }
+}
+
+//
 function reFlip(flippedCards) {
   let flippedCards = document.querySelectorAll(".is-flipped");
   if (backgroundImage) {
