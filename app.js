@@ -55,6 +55,15 @@ function cardOnClick(e) {
           }
         }, 800); // 1000ms = 1 sec
 
+        /*
+          Check if game is won
+        */
+        // Check number of hidden cards
+        let hiddenCardDivs = document.querySelectorAll('.hidden-card');
+        if (hiddenCardDivs.length === 16)
+        {
+          // Win condition
+        }
       } else {
         /*
           Un-flip cards
