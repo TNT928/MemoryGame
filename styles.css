@@ -48,7 +48,6 @@ div.card {
     background-color: blue;
     color: white;
     margin-bottom: 20px;
-
 }
 
 .timer {
@@ -57,14 +56,12 @@ div.card {
     font-size: 40px;
     margin-bottom: 20px;
     height: 10vh;
-
 }
 
 section#timer-section {
     text-align: center;
     height: 10em;
     margin-bottom: 4px;
-
 }
 
 @media only screen and (min-width: 700px) {
@@ -72,9 +69,8 @@ section#timer-section {
         height: 7rem;
         width: 7rem;
     }
-    body{
+
+    body {
         background-size: 100vw;
     }
-
-  
 }
