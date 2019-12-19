@@ -1,4 +1,4 @@
-//Match Card Function
+//Match Card Function -- handles matching logic for clicked cards
 let cards = document.querySelectorAll(".card")
 let hasFlippedCard = false;
 let firstCard, secondCard;
@@ -11,7 +11,7 @@ function flipCard() {
     }
 }
 
-//
+//possible other matching function?? Come back to this
 function reFlip(flippedCards) {
   let flippedCards = document.querySelectorAll(".is-flipped");
   if (backgroundImage) {
