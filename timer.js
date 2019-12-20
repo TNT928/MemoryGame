@@ -21,6 +21,10 @@ button.addEventListener("click", function (event) {
             minute = 0;
         }
     }, 1000);
+    AddCardClickListeners();
+    ShuffleCards();
+}, {
+    once: true
 });
 
 reset.addEventListener("click", function (event) {
@@ -28,5 +32,5 @@ reset.addEventListener("click", function (event) {
     minute = 0;
     timer.innerHTML = `0 mins 0 secs`;
     clearInterval(interval);
-
+    window.location.reload();
 })
