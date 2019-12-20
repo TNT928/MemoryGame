@@ -9,3 +9,22 @@ let isMatch = (flipCards) => {
   }
 
 }
+
+
+let moves = document.querySelector('#moveCounter');
+let clicks = 0;
+
+
+
+let scoreTracker = () =>{
+  let perfectScore = clicks === 16
+if(clicks === 16){
+  alert(`Perfect Score`)
+
+} else if(clicks > 16){
+  alert('You Suck')
+}
+}
+
+
+

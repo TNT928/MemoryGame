@@ -1,3 +1,5 @@
+
+
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
@@ -8,6 +10,9 @@ function cardOnClick(e) {
   let card = e.currentTarget;
   // Filter to prevent more than 2 cards being flipped
   if (!isPairFlipped()) {
+    clicks+=1;
+    moves.innerHTML =`Clicks : ${clicks}`;
+    
     /*
       Flipping card
     */
