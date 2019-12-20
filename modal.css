@@ -1,0 +1,49 @@
+.modal {
+    position: fixed;
+    top: 5%;
+    left: 25%;
+    width: 50%;
+    height: 3-%;
+    background-color: #fff;
+    animation: animateTop 0.4s;
+}
+
+
+
+
+/* Animations */
+@keyframes animateTop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 5%;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes animateTop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 5%;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes animateTop {
+    from {
+        top: -300px;
+        opacity: 0;
+    }
+
+    to {
+        top: 5%;
+        opacity: 1;
+    }
+}

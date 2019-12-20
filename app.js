@@ -48,19 +48,22 @@ function cardOnClick(e) {
             div.classList.add('hidden-card');
             div.classList.remove('is-flipped');
             div.removeEventListener('click', cardOnClick);
+
+            /*
+              Check if game is won
+            */
+            let hiddenCardDivs = document.querySelectorAll('.hidden-card');
+            if (hiddenCardDivs.length === 16) {
+              /*
+                Win
+              */
+              // Stop timer
+              clearInterval(interval);
+              // Show modal div
+              document.querySelector('#modalDiv').classList.remove('hidden');
+            }
           }
         }, 800); // 1000ms = 1 sec
-
-        /*
-          Check if game is won
-        */
-        // Check number of hidden cards
-        let hiddenCardDivs = document.querySelectorAll('.hidden-card');
-        if (hiddenCardDivs.length === 16)
-        {
-          // Win condition
-          
-        }
       } else {
         /*
           Un-flip cards

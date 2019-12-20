@@ -5,17 +5,18 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="flip.css">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="modal.css">
         <title>Memory Game</title>
     </head>
     <body>
         <div class="box">
-           <section id="timer-section">
-            <button id="btn" class="button">Start</button>
-            <button id="reset" class="button">↻</button>
-            <div id="timer" class="timer">0 mins 0 secs</div>
-        </section> 
+            <section id="timer-section">
+                <button id="btn" class="button">Start</button>
+                <button id="reset" class="button">↻</button>
+                <div id="timer" class="timer">0 mins 0 secs</div>
+            </section>
         </div>
-        
+
         <section class="gameboard">
             <div class="card-row">
                 <div class="card">
@@ -91,6 +92,10 @@
                 </div>
             </div>
         </section>
+
+        <div class="modal" id="modalDiv">
+            <p>Game won</p>
+        </div>
 
         <script src="app.js"></script>
         <script src="timer.js"></script>
