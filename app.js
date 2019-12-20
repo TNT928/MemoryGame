@@ -54,9 +54,14 @@ function cardOnClick(e) {
             */
             let hiddenCardDivs = document.querySelectorAll('.hidden-card');
             if (hiddenCardDivs.length === 16) {
-              // Win condition
+              /*
+                Win
+              */
+              // Stop timer
+              clearInterval(interval);
+              // Show modal div
+              document.querySelector('#modalDiv').classList.remove('hidden');
               
-              console.log('Game won');
             }
           }
         }, 800); // 1000ms = 1 sec
