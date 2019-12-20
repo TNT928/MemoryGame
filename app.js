@@ -1,7 +1,3 @@
-// On load
-AddCardClickListeners();
-ShuffleCards();
-
 //CARD FLIP
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
@@ -63,6 +59,7 @@ function cardOnClick(e) {
         if (hiddenCardDivs.length === 16)
         {
           // Win condition
+          
         }
       } else {
         /*
