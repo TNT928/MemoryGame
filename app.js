@@ -61,7 +61,6 @@ function cardOnClick(e) {
               clearInterval(interval);
               // Show modal div
               document.querySelector('#modalDiv').classList.remove('hidden');
-              
             }
           }
         }, 800); // 1000ms = 1 sec
