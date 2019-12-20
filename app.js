@@ -1,4 +1,8 @@
-
+// Disable img dragging
+let imgs = document.querySelectorAll('img');
+for (const img of imgs) {
+  img.setAttribute('draggable', 'false');
+}
 
 //CARD FLIP
 function AddCardClickListeners() {
