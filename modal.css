@@ -4,7 +4,9 @@
     left: 25%;
     width: 50%;
     height: 30%;
-    background-color: #fff;
+    background-color: gainsboro;
+    border: 2px solid black;
+    border-radius: 5px;
     animation: animateTop 0.4s;
 }
 
