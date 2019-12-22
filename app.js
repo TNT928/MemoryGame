@@ -4,19 +4,36 @@ for (const img of imgs) {
   img.setAttribute('draggable', 'false');
 }
 
-//CARD FLIP
+// For counting clicks
+let moves = document.querySelector('#moveCounter');
+let clicks = 0;
+
+/**************
+    Methods
+***************/
+
+/**
+ * Adds click listener to each card
+ * @see cardOnClick
+ */
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
   cards.forEach(card => card.addEventListener('click', cardOnClick));
 }
 
+/**
+ * Handles card clicking, checking for matches,
+ * limiting to 2 flipped cards
+ * 
+ * @param {*} e Click event argument
+ */
 function cardOnClick(e) {
   let card = e.currentTarget;
   // Filter to prevent more than 2 cards being flipped
   if (!isPairFlipped()) {
-    clicks+=1;
-    moves.innerHTML =`Clicks : ${clicks}`;
-    
+    clicks += 1;
+    moves.innerHTML = `Clicks : ${clicks}`;
+
     /*
       Flipping card
     */
