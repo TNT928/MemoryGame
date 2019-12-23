@@ -168,3 +168,30 @@ function isPairFlipped() {
   let flippedCards = document.querySelectorAll('.is-flipped');
   return flippedCards.length === 2 ? true : false;
 }
+
+let endgame = () => {
+
+  //stop timer
+  clearInterval(interval);
+
+  //Gets total game time and moves for modal
+  let totalGameMoves = moves.innerHTML;
+  let totalGameTime = timer.innerHTML;
+
+ 
+
+  //Shows total game time and moves for modal
+  totalGameMovesElement.innerHTML = totalGameMoves;
+  totalGameTimeElement.innerHTML = totalGameTime;
+
+
+  // Show modal div
+  document.querySelector('#modalDiv').classList.remove('hidden');
+
+  // Close modal div
+  close.addEventListener("click", function(){
+      document.querySelector('#modalDiv').classList.add('hidden');
+      timer.innerHTML = `0 mins 0 secs`;
+      window.location.reload();
+  })
+};

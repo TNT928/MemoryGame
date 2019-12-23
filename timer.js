@@ -45,33 +45,3 @@ reset.addEventListener("click", function () {
     clearInterval(interval);
     window.location.reload();
 })
-
-let endgame = () => {
-
-    //stop timer
-    clearInterval(interval);
-
-    //Gets total game time and moves for modal
-    let totalGameMoves = moves.innerHTML;
-    let totalGameTime = timer.innerHTML;
-  
-   
-  
-    //Shows total game time and moves for modal
-    totalGameMovesElement.innerHTML = totalGameMoves;
-    totalGameTimeElement.innerHTML = totalGameTime;
-
-
-    // Show modal div
-    document.querySelector('#modalDiv').classList.remove('hidden');
-
-    // Close modal div
-    close.addEventListener("click", function(){
-        document.querySelector('#modalDiv').classList.add('hidden');
-        timer.innerHTML = `0 mins 0 secs`;
-        window.location.reload();
-    })
-};
-
-
- 
