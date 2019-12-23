@@ -25,12 +25,14 @@ html {
 div.card {
     display: inline-flex;
     margin: 5px;
-    background-color: black;
+    /* 
+        DON'T change the bg-color here
+        or the cards won't properly disappear
+        background-color: black; 
+    */
     height: 5em;
     width: 5em;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 2px 0 10px #212121;
 }
 
 .card_face {
