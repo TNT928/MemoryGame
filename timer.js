@@ -9,10 +9,17 @@ let second = 1,
     hour = 0,
     interval;
 
-button.addEventListener("click", function (event) {
-    clearInterval(interval);
 
+
+button.addEventListener("click", function (event) {
+    //prevents start button from adding mutliple intervals
+    clearInterval(interval);
+    
+
+    //starts timer
     interval = setInterval(function () {
+
+        //records timer
         timer.innerHTML = `${minute} mins ${second} secs`;
         second++;
         if (second == 60) {
@@ -24,6 +31,7 @@ button.addEventListener("click", function (event) {
             minute = 0;
         }
     }, 1000);
+    
     AddCardClickListeners();
     ShuffleCards();
 }, {
