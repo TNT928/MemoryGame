@@ -6,17 +6,17 @@
         <link rel="stylesheet" href="flip.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="modal.css">
+        <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
         <title>Memory Game</title>
     </head>
     <body>
         <div class="box">
             <section id="timer-section">
-            <button id="btn" class="button">Start</button>
-            <button id="reset" class="button">↻</button>
+            <button id="btn" class="button blue-button">Start</button>
+            <button id="reset" class="button blue-button">↻</button>
             <div id="moveCounter">&nbsp;</div> 
             <div id="timer" class="timer">0 mins 0 secs</div>
-            
-        </section>
+            </section>
         </div>
 
         <section class="gameboard">
@@ -94,9 +94,19 @@
                 </div>
             </div>
         </section>
-
         <div class="modal hidden" id="modalDiv">
-            <p>Game won</p>
+            <div class="modal-content">
+                <span aria-label="close" role="button" class="close" id="closeModal">&times;</span>
+                <div class="modal-header">
+                    <h2>You Win!</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <p>Congratulations! <span class="game-over-icons">🥳🐟🥳🐟🥳🐟🥳</span> You successfully completed the game. <span class="game-over-icons" style="animation-delay: 0.2s">🎉 🎉 🎉</span></p>
+                        <p>You completed the game using <span id="totalGameMoves"></span> moves</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="app.js"></script>

@@ -1,20 +1,28 @@
+* {
+    font-family: 'Girassol', cursive ;
+}
 html {
-    width: 100vw;
+  width: 100vw;
+  background: url(images/background.1.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
-body {
-    background: #003973;
+/* body { */
+    /* background: #003973; */
     /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #E5E5BE, #003973);
+    /* background: -webkit-linear-gradient(to right, #E5E5BE, #003973); */
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #E5E5BE, #003973);
+    /* background: linear-gradient(to right, #E5E5BE, #003973); */
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    width: 100%;
-    overflow: hidden;
-    background-size: 141vw;
-    margin: 0;
-    width: 100vw;
-}
+    /* width: 100%; */
+    /* overflow: hidden; */
+    /* background-size: 141vw; */
+    /* margin: 0; */
+    /* width: 100vw; */
+/* } */
 
 .box{
     justify-content: center;
@@ -30,11 +38,22 @@ body {
 div.card {
     display: inline-flex;
     margin: 5px;
-    color: white;
+    background-color: black;
     height: 5em;
     width: 5em;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 2px 0 10px #212121;
 }
+
+.card_face {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+}
+
+
+
 
 .gameboard {
     height: auto;
@@ -52,9 +71,30 @@ div.card {
     width: 150px;
     font-size: 20px;
     border-radius: 10px;
-    background-color: blue;
-    color: white;
+    background-color: aqua;
+    color: black;
     margin-bottom: 20px;
+    border: none;
+    
+}
+
+.blue-button {
+	box-shadow: 3px 2px 0px 0px;
+	background: -moz-linear-gradient(top, aqua 5%, blue 100%);
+	background: -webkit-linear-gradient(top, aqua 5%, blue 100%);
+	background: -o-linear-gradient(top, aqua 5%, blue 100%);
+	background: -ms-linear-gradient(top, aqua 5%, blue 100%);
+	background: linear-gradient(to bottom, aqua 5%, blue 100%);
+	background-color: aqua;
+}
+
+.blue-button:hover {
+	background: -moz-linear-gradient(top, blue 5%, blue 100%);
+	background: -webkit-linear-gradient(top, blue 5%, aqua 100%);
+	background: -o-linear-gradient(top, blue 5%, aqua 100%);
+	background: -ms-linear-gradient(top, blue 5%, aqua 100%);
+	background: linear-gradient(to bottom, blue 5%, aqua 100%);
+	background-color: blue;
 }
 
 .timer {
