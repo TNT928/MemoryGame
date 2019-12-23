@@ -3,6 +3,7 @@ let button = document.getElementById("btn");
 let reset = document.getElementById("reset");
 let close = document.getElementById("closeModal");
 let totalGameTimeElement = document.getElementById('totalGameTime');
+let totalGameMovesElement = document.getElementById('totalGameMoves')
 let second = 1,
     minute = 0,
     hour = 0,
@@ -41,9 +42,17 @@ let endgame = () => {
 
     //stop timer
     clearInterval(interval);
-    totalGameTime = timer.innerHTML;
-    //Gets total game time for modal
+
+    //Gets total game time and moves for modal
+    let totalGameMoves = moves.innerHTML;
+    let totalGameTime = timer.innerHTML;
+  
+   
+  
+    //Shows total game time and moves for modal
+    totalGameMovesElement.innerHTML = totalGameMoves;
     totalGameTimeElement.innerHTML = totalGameTime;
+
 
     // Show modal div
     document.querySelector('#modalDiv').classList.remove('hidden');
@@ -54,7 +63,7 @@ let endgame = () => {
         timer.innerHTML = `0 mins 0 secs`;
         window.location.reload();
     })
-}
+};
 
 
  

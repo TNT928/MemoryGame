@@ -32,7 +32,7 @@ function cardOnClick(e) {
   // Filter to prevent more than 2 cards being flipped
   if (!isPairFlipped()) {
     clicks += 1;
-    moves.innerHTML = `Clicks : ${clicks}`;
+    moves.innerHTML = `${clicks}: moves `;
 
     /*
       Flipping card
@@ -79,7 +79,7 @@ function cardOnClick(e) {
               Check if game is won
             */
             let hiddenCardDivs = document.querySelectorAll('.hidden-card');
-            if (hiddenCardDivs.length === 16) {
+            if (hiddenCardDivs.length === 2) {
               /*
                 Win
               */
