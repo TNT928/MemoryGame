@@ -1,5 +1,5 @@
 div.card {
-  background-color: white;
+  background-color: black;
   border: 1px solid black;
   transition: transform 0.5s;
   transform-style: preserve-3d;
@@ -36,8 +36,9 @@ div.card {
   display: none;
 }
 
-div.hidden-card {
+div.card.hidden-card {
   cursor: default;
   background-color: transparent;
   border: 1px solid transparent;
+  box-shadow: none;
 }

@@ -25,7 +25,6 @@ html {
 div.card {
     display: inline-flex;
     margin: 5px;
-    background-color: black;
     height: 5em;
     width: 5em;
     overflow: hidden;
