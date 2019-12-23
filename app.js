@@ -79,7 +79,7 @@ function cardOnClick(e) {
               Check if game is won
             */
             let hiddenCardDivs = document.querySelectorAll('.hidden-card');
-            if (hiddenCardDivs.length === 2) {
+            if (hiddenCardDivs.length === 16) {
               /*
                 Win
               */
