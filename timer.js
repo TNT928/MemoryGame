@@ -1,6 +1,8 @@
 let timer = document.getElementById("timer");
 let button = document.getElementById("btn");
 let reset = document.getElementById("reset");
+let close = document.getElementById("closeModal");
+let totalGameTimeElement = document.getElementById('totalGameTime');
 let second = 1,
     minute = 0,
     hour = 0,
@@ -27,10 +29,32 @@ button.addEventListener("click", function (event) {
     once: true
 });
 
-reset.addEventListener("click", function (event) {
+reset.addEventListener("click", function () {
     second = 0;
     minute = 0;
     timer.innerHTML = `0 mins 0 secs`;
     clearInterval(interval);
     window.location.reload();
 })
+
+let endgame = () => {
+
+    //stop timer
+    clearInterval(interval);
+    totalGameTime = timer.innerHTML;
+    //Gets total game time for modal
+    totalGameTimeElement.innerHTML = totalGameTime;
+
+    // Show modal div
+    document.querySelector('#modalDiv').classList.remove('hidden');
+
+    // Close modal div
+    close.addEventListener("click", function(){
+        document.querySelector('#modalDiv').classList.add('hidden');
+        timer.innerHTML = `0 mins 0 secs`;
+        window.location.reload();
+    })
+}
+
+
+ 

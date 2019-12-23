@@ -83,10 +83,7 @@ function cardOnClick(e) {
               /*
                 Win
               */
-              // Stop timer
-              clearInterval(interval);
-              // Show modal div
-              document.querySelector('#modalDiv').classList.remove('hidden');
+              endgame(); 
             }
           }
         }, 800); // 1000ms = 1 sec
