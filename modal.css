@@ -5,12 +5,15 @@
     width: 50%;
     height: 30%;
     background-color: gainsboro;
-    border: 2px solid black;
+    border: 2px solid #f4f42e;
     border-radius: 5px;
     animation: animateTop 0.4s;
 }
 
-
+#modalText {
+    padding: 5px;
+    text-align: center;
+}
 
 
 /* Animations */
