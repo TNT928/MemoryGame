@@ -19,7 +19,6 @@ let clicks = 0;
 function AddCardClickListeners() {
   let cards = document.querySelectorAll('.card');
   cards.forEach(card => card.addEventListener('click', cardOnClick));
-  cards.forEach(card => card.addEventListener('touchend', cardOnClick));
 }
 
 /**
