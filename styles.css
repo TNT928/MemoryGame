@@ -33,6 +33,7 @@ div.card {
     height: 5em;
     width: 5em;
     overflow: hidden;
+    box-shadow: 2px 0 10px #212121;
 }
 
 .card_face {

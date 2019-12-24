@@ -32,7 +32,7 @@ function cardOnClick(e) {
   // Filter to prevent more than 2 cards being flipped
   if (!isPairFlipped()) {
     clicks += 1;
-    moves.innerHTML = `${clicks}: moves `;
+    moves.innerHTML = `${clicks} moves `;
 
     /*
       Flipping card
