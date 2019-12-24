@@ -1,5 +1,5 @@
 div.card {
-  background-color: black;
+  background-color: white;
   border: 1px solid black;
   border-radius: 10px;
   transition: transform 0.5s;
@@ -16,7 +16,6 @@ div.card {
   max-width: 100%;
 }
 
- 
 .card_face {
   height: 90%;
   width: 90%;
