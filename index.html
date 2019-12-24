@@ -1,102 +1,114 @@
 <html lang="en">
     <head>
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="flip.css">
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="modal.css">
+        <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
         <title>Memory Game</title>
     </head>
     <body>
         <div class="box">
             <section id="timer-section">
-            <button id="btn" class="button">Start</button>
-            <button id="reset" class="button">↻</button>
+            <button id="btn" class="button blue-button">Start</button>
+            <button id="reset" class="button blue-button">↻</button>
             <div id="moveCounter">&nbsp;</div> 
             <div id="timer" class="timer">0 mins 0 secs</div>
-            
-        </section>
+            </section>
         </div>
 
         <section class="gameboard">
             <div class="card-row">
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front " src="GC_logo.png" />
+                    <img class="card_face card_front " src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
             </div>
 
             <div class="card-row">
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
-                    <img class="card_face card_back hidden"></img>
-                </div>
-            </div>
-            <div class="card-row">
-                <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
-                    <img class="card_face card_back hidden"></img>
-                </div>
-                <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
-                    <img class="card_face card_back hidden"></img>
-                </div>
-                <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
-                    <img class="card_face card_back hidden"></img>
-                </div>
-                <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
             </div>
             <div class="card-row">
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
                 <div class="card">
-                    <img class="card_face card_front" src="GC_logo.png" />
+                    <img class="card_face card_front" src="GC_tent.png" />
+                    <img class="card_face card_back hidden"></img>
+                </div>
+            </div>
+            <div class="card-row">
+                <div class="card">
+                    <img class="card_face card_front" src="GC_tent.png" />
+                    <img class="card_face card_back hidden"></img>
+                </div>
+                <div class="card">
+                    <img class="card_face card_front" src="GC_tent.png" />
+                    <img class="card_face card_back hidden"></img>
+                </div>
+                <div class="card">
+                    <img class="card_face card_front" src="GC_tent.png" />
+                    <img class="card_face card_back hidden"></img>
+                </div>
+                <div class="card">
+                    <img class="card_face card_front" src="GC_tent.png" />
                     <img class="card_face card_back hidden"></img>
                 </div>
             </div>
         </section>
-
-        <div class="modal hidden" id="modalDiv">
-            <p>Game won</p>
+        <div class="modal" id="modalDiv">
+            <div class="modal-content">
+                <span aria-label="close" role="button" class="close" id="closeModal">&times;</span>
+                <div class="modal-header">
+                    <h2>You Win!</h2>
+                </div>
+                <div class="modal-body">
+                    <div class="message">
+                        <p><span class="game-over-icons">🥳 🐟 🥳</span> Congratulations! <span class="game-over-icons" style="animation-delay: 0.2s">🎉 🎉 🎉</span></p>
+                        <p>You completed the game using <span id="totalGameMoves"></span>
+                        <br>in <span id="totalGameTime"></span></p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <script src="app.js"></script>

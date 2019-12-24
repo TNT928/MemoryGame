@@ -1,6 +1,7 @@
 div.card {
   background-color: white;
   border: 1px solid black;
+  border-radius: 10px;
   transition: transform 0.5s;
   transform-style: preserve-3d;
   cursor: pointer;
@@ -15,7 +16,6 @@ div.card {
   max-width: 100%;
 }
 
- 
 .card_face {
   height: 90%;
   width: 90%;
@@ -36,8 +36,9 @@ div.card {
   display: none;
 }
 
-div.hidden-card {
+div.card.hidden-card {
   cursor: default;
   background-color: transparent;
   border: 1px solid transparent;
+  box-shadow: none;
 }

@@ -32,7 +32,7 @@ function cardOnClick(e) {
   // Filter to prevent more than 2 cards being flipped
   if (!isPairFlipped()) {
     clicks += 1;
-    moves.innerHTML = `Clicks : ${clicks}`;
+    moves.innerHTML = `${clicks} moves `;
 
     /*
       Flipping card
@@ -83,10 +83,7 @@ function cardOnClick(e) {
               /*
                 Win
               */
-              // Stop timer
-              clearInterval(interval);
-              // Show modal div
-              document.querySelector('#modalDiv').classList.remove('hidden');
+              endgame(); 
             }
           }
         }, 800); // 1000ms = 1 sec
@@ -138,10 +135,10 @@ function ShuffleCards() {
   let shuffledCardValues = shuffle(backgroundImage);
 
   // Getting the elements for each card face
-  let cardFaces = document.querySelectorAll('.card_back');
+  let cardBacks = document.querySelectorAll('.card_back');
   // Adding values to the card face
-  for (let i = 0; i < cardFaces.length; i++) {
-    cardFaces[i].setAttribute('src', shuffledCardValues[i]);
+  for (let i = 0; i < cardBacks.length; i++) {
+    cardBacks[i].setAttribute('src', shuffledCardValues[i]);
   }
 }
 
@@ -171,3 +168,30 @@ function isPairFlipped() {
   let flippedCards = document.querySelectorAll('.is-flipped');
   return flippedCards.length === 2 ? true : false;
 }
+
+let endgame = () => {
+
+  //stop timer
+  clearInterval(interval);
+
+  //Gets total game time and moves for modal
+  let totalGameMoves = moves.innerHTML;
+  let totalGameTime = timer.innerHTML;
+
+ 
+
+  //Shows total game time and moves for modal
+  totalGameMovesElement.innerHTML = totalGameMoves;
+  totalGameTimeElement.innerHTML = totalGameTime;
+
+
+  // Show modal div
+  document.querySelector('#modalDiv').classList.remove('hidden');
+
+  // Close modal div
+  btnClosingTime.addEventListener("click", function(){
+      document.querySelector('#modalDiv').classList.add('hidden');
+      timer.innerHTML = `0 mins 0 secs`;
+      window.location.reload();
+  })
+};
