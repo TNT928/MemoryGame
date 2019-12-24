@@ -92,6 +92,10 @@ div.card {
     height: 10vh;
 }
 
+.modal-content {
+    width: 90%;
+}
+
 section#timer-section {
     text-align: center;
     height: 10em;
@@ -106,6 +110,10 @@ section#timer-section {
 
     body {
         background-size: 100vw;
+    }
+
+    .modal-content {
+        width: 30%;
     }
 }
 

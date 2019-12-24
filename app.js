@@ -135,10 +135,10 @@ function ShuffleCards() {
   let shuffledCardValues = shuffle(backgroundImage);
 
   // Getting the elements for each card face
-  let cardFaces = document.querySelectorAll('.card_back');
+  let cardBacks = document.querySelectorAll('.card_back');
   // Adding values to the card face
-  for (let i = 0; i < cardFaces.length; i++) {
-    cardFaces[i].setAttribute('src', shuffledCardValues[i]);
+  for (let i = 0; i < cardBacks.length; i++) {
+    cardBacks[i].setAttribute('src', shuffledCardValues[i]);
   }
 }
 
@@ -189,7 +189,7 @@ let endgame = () => {
   document.querySelector('#modalDiv').classList.remove('hidden');
 
   // Close modal div
-  close.addEventListener("click", function(){
+  btnClosingTime.addEventListener("click", function(){
       document.querySelector('#modalDiv').classList.add('hidden');
       timer.innerHTML = `0 mins 0 secs`;
       window.location.reload();
